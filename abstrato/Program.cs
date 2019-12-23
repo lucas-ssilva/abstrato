@@ -38,17 +38,12 @@ namespace abstrato
 
 
             }
-            foreach (TaxPayer obj in list)
-            {
-
-                Console.WriteLine(obj.Name + ": $ " + obj.Tax().ToString("F2"));
-
-            }
             double sun = 0;
             foreach (TaxPayer obj in list)
             {
-
                 sun += obj.Tax();
+                Console.WriteLine(obj.Name + ": $ " + obj.Tax().ToString("F2"));
+
             }
             Console.WriteLine();
             Console.WriteLine("TOTAL TAXES: $ " + sun.ToString("F2"));
